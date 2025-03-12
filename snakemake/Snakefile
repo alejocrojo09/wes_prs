@@ -1,0 +1,6 @@
+rule all:
+    input:
+        expand('deepvariant/{sample}_dv.vcf.gz', sample = Samples)
+        expand("/vep/{samples}_annotated.vcf.gz", samples = Samples)
+
+include rules/rules.smk
